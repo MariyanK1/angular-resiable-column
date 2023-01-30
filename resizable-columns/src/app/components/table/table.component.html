@@ -1,6 +1,6 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container *ngFor="let column of displayedColumns; let i = index" [matColumnDef]="column">
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
         <th mat-header-cell *matHeaderCellDef [resizableColumn]="true">
             <span>{{column}}</span>
         </th>

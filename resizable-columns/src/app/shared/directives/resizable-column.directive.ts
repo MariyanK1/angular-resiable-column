@@ -26,7 +26,6 @@ export class ResizableColumnDirective implements OnInit {
     }
 
     const row = this.renderer.parentNode(this.column);
-    console.log(this.column);
     const thead = this.renderer.parentNode(row);
 
     this.table = this.renderer.parentNode(thead);

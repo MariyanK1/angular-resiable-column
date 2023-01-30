@@ -1,24 +1,32 @@
 table {
   width: 100%;
-  position: relative;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
   th {
     position: relative;
-  }
 
-  .resize-holder {
-    display: block;
-    border-right: 2px solid white;
-    position: absolute;
-    width: 30px;
-    top: 0;
-    right: 0;
-    height: 100%;
-    cursor: col-resize;
-    // opacity: 0;
-  }
+    &:not(:last-child) {
+      .resize-holder {
+        display: block;
+        border-right: 2px solid white;
+        position: absolute;
+        width: 30px;
+        top: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+        cursor: col-resize;
 
-  thead:hover .resize-holder {
-    // opacity: 1;
+        &:hover {
+          transition: 500ms ease;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
